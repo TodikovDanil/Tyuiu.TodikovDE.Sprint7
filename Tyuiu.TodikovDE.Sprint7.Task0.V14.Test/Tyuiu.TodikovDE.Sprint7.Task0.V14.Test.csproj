@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.TodikovDE.Sprint7.Task0.V14.Lib\Tyuiu.TodikovDE.Sprint7.Task0.V14.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 

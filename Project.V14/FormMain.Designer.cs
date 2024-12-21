@@ -1,24 +1,29 @@
-﻿namespace Project.V14
-{
-    partial class Form1
-    {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Drawing.Printing;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+namespace Project.V14
+{
+    partial class FormMain
+{
+    /// <summary>
+    ///  Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    ///  Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing && (components != null))
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            components.Dispose();
         }
+        base.Dispose(disposing);
+    }
 
         #region Windows Form Designer generated code
 
@@ -28,319 +33,549 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            menuStrip_TDE = new MenuStrip();
+            ToolStripMenuItemFile_TDE = new ToolStripMenuItem();
+            ToolStripMenuOpenNewFileTool_TDE = new ToolStripMenuItem();
+            ToolStripMenuOpenNewFile_TDE = new ToolStripMenuItem();
+            ToolStripMenuImages_TDE = new ToolStripMenuItem();
+            ToolStripMenuSaveFile_TDE = new ToolStripMenuItem();
+            ToolStripMenuRefresh_TDE = new ToolStripMenuItem();
+            ToolStripMenuOpenFile_TDE = new ToolStripMenuItem();
+            ToolStripMenuItemProgramm_TDE = new ToolStripMenuItem();
+            ToolStripMenuAbout_TDE = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            ToolStripMenuExit_TDE = new ToolStripMenuItem();
+            toolTip_TDE = new ToolTip(components);
+            openFileDialog_TDE = new OpenFileDialog();
+            saveFileDialog_TDE = new SaveFileDialog();
+            tabControlRoutes_TDE = new TabControl();
+            tabPageFeatures = new TabPage();
+            dataGridViewFeatures_TDE = new DataGridView();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            tabPageRoutes = new TabPage();
+            panelControl_TDE = new Panel();
+            groupBoxSearch_TDE = new GroupBox();
+            textBoxSearch_TDE = new TextBox();
+            buttonSearch_TDE = new Button();
+            groupBoxFile_TDE = new GroupBox();
+            buttonOpenFile_TDE = new Button();
+            buttonSaveFile_TDE = new Button();
+            buttonUpdateFile_TDE = new Button();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
-            groupBox4 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            dataGridView1 = new DataGridView();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            menuStrip1 = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            textBox1 = new TextBox();
+            buttonHelp_TDE = new Button();
+            buttonHelpImages_TDE = new Button();
+            dataGridViewRoutes_TDE = new DataGridView();
+            ColumnType = new DataGridViewTextBoxColumn();
+            ColumnEnd = new DataGridViewTextBoxColumn();
+            ColumnStart = new DataGridViewTextBoxColumn();
+            ColumnNumber = new DataGridViewTextBoxColumn();
+            tableLayoutPanel_TDE = new TableLayoutPanel();
+            menuStrip_TDE.SuspendLayout();
+            tabControlRoutes_TDE.SuspendLayout();
+            tabPageFeatures.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFeatures_TDE).BeginInit();
+            tabPageRoutes.SuspendLayout();
+            panelControl_TDE.SuspendLayout();
+            groupBoxSearch_TDE.SuspendLayout();
+            groupBoxFile_TDE.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRoutes_TDE).BeginInit();
+            tableLayoutPanel_TDE.SuspendLayout();
             SuspendLayout();
+            // 
+            // menuStrip_TDE
+            // 
+            menuStrip_TDE.ImageScalingSize = new Size(20, 20);
+            menuStrip_TDE.Items.AddRange(new ToolStripItem[] { ToolStripMenuItemFile_TDE, ToolStripMenuItemProgramm_TDE });
+            menuStrip_TDE.Location = new Point(0, 0);
+            menuStrip_TDE.Name = "menuStrip_TDE";
+            menuStrip_TDE.Padding = new Padding(7, 3, 0, 3);
+            menuStrip_TDE.RenderMode = ToolStripRenderMode.System;
+            menuStrip_TDE.Size = new Size(923, 30);
+            menuStrip_TDE.TabIndex = 0;
+            menuStrip_TDE.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItemFile_TDE
+            // 
+            ToolStripMenuItemFile_TDE.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuOpenNewFileTool_TDE, ToolStripMenuSaveFile_TDE, ToolStripMenuRefresh_TDE, ToolStripMenuOpenFile_TDE });
+            ToolStripMenuItemFile_TDE.Name = "ToolStripMenuItemFile_TDE";
+            ToolStripMenuItemFile_TDE.Size = new Size(59, 24);
+            ToolStripMenuItemFile_TDE.Text = "Файл";
+            // 
+            // ToolStripMenuOpenNewFileTool_TDE
+            // 
+            ToolStripMenuOpenNewFileTool_TDE.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuOpenNewFile_TDE, ToolStripMenuImages_TDE });
+            ToolStripMenuOpenNewFileTool_TDE.Name = "ToolStripMenuOpenNewFileTool_TDE";
+            ToolStripMenuOpenNewFileTool_TDE.Size = new Size(247, 26);
+            ToolStripMenuOpenNewFileTool_TDE.Text = "Открыть новый файл";
+            ToolStripMenuOpenNewFileTool_TDE.Click += buttonOpenFile_TDE_Click;
+            // 
+            // ToolStripMenuOpenNewFile_TDE
+            // 
+            ToolStripMenuOpenNewFile_TDE.Name = "ToolStripMenuOpenNewFile_TDE";
+            ToolStripMenuOpenNewFile_TDE.Size = new Size(327, 26);
+            ToolStripMenuOpenNewFile_TDE.Text = "Открыть файл машрутов";
+            ToolStripMenuOpenNewFile_TDE.Click += buttonOpenFile_TDE_Click;
+            // 
+            // ToolStripMenuImages_TDE
+            // 
+            ToolStripMenuImages_TDE.Name = "ToolStripMenuImages_TDE";
+            ToolStripMenuImages_TDE.Size = new Size(327, 26);
+            ToolStripMenuImages_TDE.Text = "Выбрать папку с изображениями";
+            ToolStripMenuImages_TDE.Click += ToolStripMenuImages_TDE_Click;
+            // 
+            // ToolStripMenuSaveFile_TDE
+            // 
+            ToolStripMenuSaveFile_TDE.Enabled = false;
+            ToolStripMenuSaveFile_TDE.Name = "ToolStripMenuSaveFile_TDE";
+            ToolStripMenuSaveFile_TDE.Size = new Size(247, 26);
+            ToolStripMenuSaveFile_TDE.Text = "Сохранить как";
+            ToolStripMenuSaveFile_TDE.Click += buttonSaveFile_TDE_Click;
+            // 
+            // ToolStripMenuRefresh_TDE
+            // 
+            ToolStripMenuRefresh_TDE.Enabled = false;
+            ToolStripMenuRefresh_TDE.Name = "ToolStripMenuRefresh_TDE";
+            ToolStripMenuRefresh_TDE.Size = new Size(247, 26);
+            ToolStripMenuRefresh_TDE.Text = "Обновить";
+            ToolStripMenuRefresh_TDE.Click += buttonUpdateFile_TDE_Click;
+            // 
+            // ToolStripMenuOpenFile_TDE
+            // 
+            ToolStripMenuOpenFile_TDE.Enabled = false;
+            ToolStripMenuOpenFile_TDE.Name = "ToolStripMenuOpenFile_TDE";
+            ToolStripMenuOpenFile_TDE.Size = new Size(247, 26);
+            ToolStripMenuOpenFile_TDE.Text = "Открыть данный файл";
+            ToolStripMenuOpenFile_TDE.Click += ToolStripMenuOpenFile_TDE_Click;
+            // 
+            // ToolStripMenuItemProgramm_TDE
+            // 
+            ToolStripMenuItemProgramm_TDE.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuAbout_TDE, toolStripSeparator1, ToolStripMenuExit_TDE });
+            ToolStripMenuItemProgramm_TDE.Name = "ToolStripMenuItemProgramm_TDE";
+            ToolStripMenuItemProgramm_TDE.Size = new Size(105, 24);
+            ToolStripMenuItemProgramm_TDE.Text = "Программа";
+            // 
+            // ToolStripMenuAbout_TDE
+            // 
+            ToolStripMenuAbout_TDE.Name = "ToolStripMenuAbout_TDE";
+            ToolStripMenuAbout_TDE.Size = new Size(187, 26);
+            ToolStripMenuAbout_TDE.Text = "О программе";
+            ToolStripMenuAbout_TDE.Click += ToolStripMenuAbout_TDE_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(184, 6);
+            // 
+            // ToolStripMenuExit_TDE
+            // 
+            ToolStripMenuExit_TDE.Name = "ToolStripMenuExit_TDE";
+            ToolStripMenuExit_TDE.Size = new Size(187, 26);
+            ToolStripMenuExit_TDE.Text = "Выход";
+            ToolStripMenuExit_TDE.Click += ToolStripMenuExit_TDE_Click;
+            // 
+            // toolTip_TDE
+            // 
+            toolTip_TDE.IsBalloon = true;
+            toolTip_TDE.ToolTipIcon = ToolTipIcon.Info;
+            toolTip_TDE.Popup += toolTip_TDE_Popup;
+            // 
+            // openFileDialog_TDE
+            // 
+            openFileDialog_TDE.FileName = "Routes.csv";
+            // 
+            // saveFileDialog_TDE
+            // 
+            saveFileDialog_TDE.FileName = "file.csv";
+            // 
+            // tabControlRoutes_TDE
+            // 
+            tabControlRoutes_TDE.Controls.Add(tabPageRoutes);
+            tabControlRoutes_TDE.Controls.Add(tabPageFeatures);
+            tabControlRoutes_TDE.Dock = DockStyle.Fill;
+            tabControlRoutes_TDE.Location = new Point(282, 11);
+            tabControlRoutes_TDE.Margin = new Padding(3, 4, 3, 4);
+            tabControlRoutes_TDE.Name = "tabControlRoutes_TDE";
+            tabControlRoutes_TDE.SelectedIndex = 0;
+            tabControlRoutes_TDE.Size = new Size(632, 628);
+            tabControlRoutes_TDE.TabIndex = 2;
+            tabControlRoutes_TDE.Selected += tabControlRoutes_TDE_Selected;
+            // 
+            // tabPageFeatures
+            // 
+            tabPageFeatures.Controls.Add(dataGridViewFeatures_TDE);
+            tabPageFeatures.Location = new Point(4, 29);
+            tabPageFeatures.Margin = new Padding(3, 4, 3, 4);
+            tabPageFeatures.Name = "tabPageFeatures";
+            tabPageFeatures.Padding = new Padding(3, 4, 3, 4);
+            tabPageFeatures.Size = new Size(342, 595);
+            tabPageFeatures.TabIndex = 1;
+            tabPageFeatures.Text = "Избранные";
+            tabPageFeatures.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewFeatures_TDE
+            // 
+            dataGridViewFeatures_TDE.AllowUserToAddRows = false;
+            dataGridViewFeatures_TDE.AllowUserToDeleteRows = false;
+            dataGridViewFeatures_TDE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewFeatures_TDE.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            dataGridViewFeatures_TDE.Dock = DockStyle.Fill;
+            dataGridViewFeatures_TDE.Location = new Point(3, 4);
+            dataGridViewFeatures_TDE.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewFeatures_TDE.MinimumSize = new Size(609, 501);
+            dataGridViewFeatures_TDE.Name = "dataGridViewFeatures_TDE";
+            dataGridViewFeatures_TDE.ReadOnly = true;
+            dataGridViewFeatures_TDE.RowHeadersVisible = false;
+            dataGridViewFeatures_TDE.RowHeadersWidth = 51;
+            dataGridViewFeatures_TDE.Size = new Size(609, 587);
+            dataGridViewFeatures_TDE.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Тип";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            dataGridViewTextBoxColumn4.ToolTipText = "Вид транспорта";
+            dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Конечная остановка";
+            dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            dataGridViewTextBoxColumn3.ToolTipText = "Последняя остановка";
+            dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Начальная остановка";
+            dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            dataGridViewTextBoxColumn2.ToolTipText = "Первая остановка";
+            dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "№";
+            dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.ToolTipText = "Номер маршрута";
+            dataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // tabPageRoutes
+            // 
+            tabPageRoutes.Controls.Add(dataGridViewRoutes_TDE);
+            tabPageRoutes.Location = new Point(4, 29);
+            tabPageRoutes.Margin = new Padding(3, 4, 3, 4);
+            tabPageRoutes.Name = "tabPageRoutes";
+            tabPageRoutes.Padding = new Padding(3, 4, 3, 4);
+            tabPageRoutes.Size = new Size(624, 595);
+            tabPageRoutes.TabIndex = 0;
+            tabPageRoutes.Text = "Список маршрутов";
+            tabPageRoutes.UseVisualStyleBackColor = true;
+            tabPageRoutes.Click += tabPageRoutes_Click;
+            // 
+            // panelControl_TDE
+            // 
+            panelControl_TDE.Controls.Add(groupBox1);
+            panelControl_TDE.Controls.Add(groupBoxFile_TDE);
+            panelControl_TDE.Controls.Add(groupBoxSearch_TDE);
+            panelControl_TDE.Location = new Point(9, 11);
+            panelControl_TDE.Margin = new Padding(3, 4, 3, 4);
+            panelControl_TDE.Name = "panelControl_TDE";
+            panelControl_TDE.Padding = new Padding(6, 0, 6, 7);
+            panelControl_TDE.Size = new Size(267, 628);
+            panelControl_TDE.TabIndex = 1;
+            // 
+            // groupBoxSearch_TDE
+            // 
+            groupBoxSearch_TDE.Controls.Add(buttonSearch_TDE);
+            groupBoxSearch_TDE.Controls.Add(textBoxSearch_TDE);
+            groupBoxSearch_TDE.Dock = DockStyle.Top;
+            groupBoxSearch_TDE.Location = new Point(6, 0);
+            groupBoxSearch_TDE.Margin = new Padding(3, 4, 3, 4);
+            groupBoxSearch_TDE.Name = "groupBoxSearch_TDE";
+            groupBoxSearch_TDE.Padding = new Padding(3, 4, 3, 4);
+            groupBoxSearch_TDE.Size = new Size(255, 97);
+            groupBoxSearch_TDE.TabIndex = 0;
+            groupBoxSearch_TDE.TabStop = false;
+            groupBoxSearch_TDE.Text = "Поиск";
+            groupBoxSearch_TDE.Enter += groupBoxSearch_TDE_Enter;
+            // 
+            // textBoxSearch_TDE
+            // 
+            textBoxSearch_TDE.Location = new Point(7, 32);
+            textBoxSearch_TDE.Margin = new Padding(3, 4, 3, 4);
+            textBoxSearch_TDE.Name = "textBoxSearch_TDE";
+            textBoxSearch_TDE.Size = new Size(180, 27);
+            textBoxSearch_TDE.TabIndex = 3;
+            toolTip_TDE.SetToolTip(textBoxSearch_TDE, "Введите номер маршрута");
+            textBoxSearch_TDE.MouseEnter += textBoxSearch_TDE_MouseEnter;
+            // 
+            // buttonSearch_TDE
+            // 
+            buttonSearch_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonSearch_TDE.Image");
+            buttonSearch_TDE.Location = new Point(195, 28);
+            buttonSearch_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonSearch_TDE.Name = "buttonSearch_TDE";
+            buttonSearch_TDE.Size = new Size(57, 55);
+            buttonSearch_TDE.TabIndex = 4;
+            toolTip_TDE.SetToolTip(buttonSearch_TDE, "Выполнить поиск");
+            buttonSearch_TDE.UseVisualStyleBackColor = true;
+            buttonSearch_TDE.Click += buttonSearch_TDE_Click;
+            // 
+            // groupBoxFile_TDE
+            // 
+            groupBoxFile_TDE.Controls.Add(buttonUpdateFile_TDE);
+            groupBoxFile_TDE.Controls.Add(buttonSaveFile_TDE);
+            groupBoxFile_TDE.Controls.Add(buttonOpenFile_TDE);
+            groupBoxFile_TDE.Dock = DockStyle.Top;
+            groupBoxFile_TDE.Location = new Point(6, 97);
+            groupBoxFile_TDE.Margin = new Padding(3, 4, 3, 4);
+            groupBoxFile_TDE.Name = "groupBoxFile_TDE";
+            groupBoxFile_TDE.Padding = new Padding(3, 4, 3, 4);
+            groupBoxFile_TDE.Size = new Size(255, 116);
+            groupBoxFile_TDE.TabIndex = 1;
+            groupBoxFile_TDE.TabStop = false;
+            groupBoxFile_TDE.Text = "Файл";
+            // 
+            // buttonOpenFile_TDE
+            // 
+            buttonOpenFile_TDE.BackgroundImageLayout = ImageLayout.Center;
+            buttonOpenFile_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonOpenFile_TDE.Image");
+            buttonOpenFile_TDE.Location = new Point(7, 21);
+            buttonOpenFile_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonOpenFile_TDE.Name = "buttonOpenFile_TDE";
+            buttonOpenFile_TDE.Size = new Size(74, 87);
+            buttonOpenFile_TDE.TabIndex = 0;
+            toolTip_TDE.SetToolTip(buttonOpenFile_TDE, "Открыть файл маршрутов (.csv)");
+            buttonOpenFile_TDE.UseVisualStyleBackColor = true;
+            buttonOpenFile_TDE.Click += buttonOpenFile_TDE_Click;
+            buttonOpenFile_TDE.MouseEnter += buttonOpenFile_TDE_MouseEnter;
+            // 
+            // buttonSaveFile_TDE
+            // 
+            buttonSaveFile_TDE.BackgroundImageLayout = ImageLayout.Center;
+            buttonSaveFile_TDE.Enabled = false;
+            buttonSaveFile_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonSaveFile_TDE.Image");
+            buttonSaveFile_TDE.Location = new Point(88, 21);
+            buttonSaveFile_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonSaveFile_TDE.Name = "buttonSaveFile_TDE";
+            buttonSaveFile_TDE.Size = new Size(74, 87);
+            buttonSaveFile_TDE.TabIndex = 1;
+            toolTip_TDE.SetToolTip(buttonSaveFile_TDE, "Сохранить файл");
+            buttonSaveFile_TDE.UseVisualStyleBackColor = true;
+            buttonSaveFile_TDE.Click += buttonSaveFile_TDE_Click;
+            buttonSaveFile_TDE.MouseEnter += buttonSaveFile_TDE_MouseEnter;
+            // 
+            // buttonUpdateFile_TDE
+            // 
+            buttonUpdateFile_TDE.BackgroundImageLayout = ImageLayout.Center;
+            buttonUpdateFile_TDE.Enabled = false;
+            buttonUpdateFile_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonUpdateFile_TDE.Image");
+            buttonUpdateFile_TDE.Location = new Point(169, 21);
+            buttonUpdateFile_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonUpdateFile_TDE.Name = "buttonUpdateFile_TDE";
+            buttonUpdateFile_TDE.Size = new Size(74, 87);
+            buttonUpdateFile_TDE.TabIndex = 2;
+            toolTip_TDE.SetToolTip(buttonUpdateFile_TDE, "Обновить содержимое файла");
+            buttonUpdateFile_TDE.UseVisualStyleBackColor = true;
+            buttonUpdateFile_TDE.Click += buttonUpdateFile_TDE_Click;
+            buttonUpdateFile_TDE.MouseEnter += buttonUpdateFile_TDE_MouseEnter;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(button6);
-            groupBox1.Location = new Point(23, 54);
+            groupBox1.Controls.Add(buttonHelpImages_TDE);
+            groupBox1.Controls.Add(buttonHelp_TDE);
+            groupBox1.Location = new Point(0, 519);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(365, 59);
-            groupBox1.TabIndex = 0;
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(253, 105);
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Поиск";
-            groupBox1.Enter += groupBox1_Enter;
+            groupBox1.Text = "Руководство";
             // 
-            // groupBox2
+            // buttonHelp_TDE
             // 
-            groupBox2.Controls.Add(button7);
-            groupBox2.Controls.Add(button2);
-            groupBox2.Location = new Point(23, 110);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(365, 153);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Руководство";
+            buttonHelp_TDE.BackgroundImageLayout = ImageLayout.Center;
+            buttonHelp_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonHelp_TDE.Image");
+            buttonHelp_TDE.Location = new Point(43, 21);
+            buttonHelp_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonHelp_TDE.Name = "buttonHelp_TDE";
+            buttonHelp_TDE.Size = new Size(74, 87);
+            buttonHelp_TDE.TabIndex = 3;
+            toolTip_TDE.SetToolTip(buttonHelp_TDE, "Как создать свой файл маршрутов");
+            buttonHelp_TDE.UseVisualStyleBackColor = true;
+     
+            buttonHelp_TDE.MouseEnter += buttonHelp_TDE_MouseEnter;
             // 
-            // groupBox3
+            // buttonHelpImages_TDE
             // 
-            groupBox3.Controls.Add(button8);
-            groupBox3.Controls.Add(button1);
-            groupBox3.Controls.Add(button4);
-            groupBox3.Location = new Point(23, 269);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(365, 125);
-            groupBox3.TabIndex = 2;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Файл";
-            groupBox3.Enter += groupBox3_Enter;
+            buttonHelpImages_TDE.BackgroundImageLayout = ImageLayout.Center;
+            buttonHelpImages_TDE.Image = (System.Drawing.Image)resources.GetObject("buttonHelpImages_TDE.Image");
+            buttonHelpImages_TDE.Location = new Point(135, 21);
+            buttonHelpImages_TDE.Margin = new Padding(3, 4, 3, 4);
+            buttonHelpImages_TDE.Name = "buttonHelpImages_TDE";
+            buttonHelpImages_TDE.Size = new Size(74, 87);
+            buttonHelpImages_TDE.TabIndex = 4;
+            toolTip_TDE.SetToolTip(buttonHelpImages_TDE, "Как сделать отображение фото остановок\r\n");
+            buttonHelpImages_TDE.UseVisualStyleBackColor = true;
+            buttonHelpImages_TDE.MouseEnter += buttonHelpImages_TDE_MouseEnter;
             // 
-            // groupBox4
+            // dataGridViewRoutes_TDE
             // 
-            groupBox4.Controls.Add(button5);
-            groupBox4.Controls.Add(button3);
-            groupBox4.Location = new Point(23, 400);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(365, 147);
-            groupBox4.TabIndex = 3;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Работа с маршрутами";
-            groupBox4.Enter += groupBox4_Enter;
+            dataGridViewRoutes_TDE.AllowUserToAddRows = false;
+            dataGridViewRoutes_TDE.AllowUserToDeleteRows = false;
+            dataGridViewRoutes_TDE.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewRoutes_TDE.Columns.AddRange(new DataGridViewColumn[] { ColumnNumber, ColumnStart, ColumnEnd, ColumnType });
+            dataGridViewRoutes_TDE.Location = new Point(6, 3);
+            dataGridViewRoutes_TDE.Margin = new Padding(3, 4, 3, 4);
+            dataGridViewRoutes_TDE.Name = "dataGridViewRoutes_TDE";
+            dataGridViewRoutes_TDE.ReadOnly = true;
+            dataGridViewRoutes_TDE.RowHeadersVisible = false;
+            dataGridViewRoutes_TDE.RowHeadersWidth = 51;
+            dataGridViewRoutes_TDE.Size = new Size(618, 583);
+            dataGridViewRoutes_TDE.TabIndex = 0;
+            
             // 
-            // button1
+            // ColumnType
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.Location = new Point(11, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(111, 103);
-            button1.TabIndex = 4;
-            button1.UseVisualStyleBackColor = true;
+            ColumnType.HeaderText = "Тип";
+            ColumnType.MinimumWidth = 6;
+            ColumnType.Name = "ColumnType";
+            ColumnType.ReadOnly = true;
+            ColumnType.ToolTipText = "Вид транспорта";
+            ColumnType.Width = 125;
             // 
-            // button2
+            // ColumnEnd
             // 
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.Location = new Point(33, 43);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 110);
-            button2.TabIndex = 5;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            ColumnEnd.HeaderText = "Конечная остановка";
+            ColumnEnd.MinimumWidth = 6;
+            ColumnEnd.Name = "ColumnEnd";
+            ColumnEnd.ReadOnly = true;
+            ColumnEnd.ToolTipText = "Последняя остановка";
+            ColumnEnd.Width = 200;
             // 
-            // button3
+            // ColumnStart
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.Location = new Point(11, 26);
-            button3.Name = "button3";
-            button3.Size = new Size(118, 121);
-            button3.TabIndex = 6;
-            button3.UseVisualStyleBackColor = true;
+            ColumnStart.HeaderText = "Начальная остановка";
+            ColumnStart.MinimumWidth = 6;
+            ColumnStart.Name = "ColumnStart";
+            ColumnStart.ReadOnly = true;
+            ColumnStart.ToolTipText = "Первая остановка";
+            ColumnStart.Width = 200;
             // 
-            // button4
+            // ColumnNumber
             // 
-            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
-            button4.Location = new Point(240, 26);
-            button4.Name = "button4";
-            button4.Size = new Size(115, 103);
-            button4.TabIndex = 7;
-            button4.UseVisualStyleBackColor = true;
+            ColumnNumber.HeaderText = "№";
+            ColumnNumber.MinimumWidth = 6;
+            ColumnNumber.Name = "ColumnNumber";
+            ColumnNumber.ReadOnly = true;
+            ColumnNumber.ToolTipText = "Номер маршрута";
+            ColumnNumber.Width = 30;
             // 
-            // button5
+            // tableLayoutPanel_TDE
             // 
-            button5.BackgroundImage = (Image)resources.GetObject("button5.BackgroundImage");
-            button5.Location = new Point(209, 26);
-            button5.Name = "button5";
-            button5.Size = new Size(119, 121);
-            button5.TabIndex = 8;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            tableLayoutPanel_TDE.ColumnCount = 2;
+            tableLayoutPanel_TDE.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
+            tableLayoutPanel_TDE.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel_TDE.Controls.Add(tabControlRoutes_TDE, 1, 0);
+            tableLayoutPanel_TDE.Controls.Add(panelControl_TDE, 0, 0);
+            tableLayoutPanel_TDE.Dock = DockStyle.Fill;
+            tableLayoutPanel_TDE.Location = new Point(0, 30);
+            tableLayoutPanel_TDE.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel_TDE.Name = "tableLayoutPanel_TDE";
+            tableLayoutPanel_TDE.Padding = new Padding(6, 7, 6, 7);
+            tableLayoutPanel_TDE.RowCount = 1;
+            tableLayoutPanel_TDE.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel_TDE.Size = new Size(923, 650);
+            tableLayoutPanel_TDE.TabIndex = 1;
             // 
-            // button6
-            // 
-            button6.BackgroundImage = (Image)resources.GetObject("button6.BackgroundImage");
-            button6.Location = new Point(312, 11);
-            button6.Name = "button6";
-            button6.Size = new Size(47, 48);
-            button6.TabIndex = 9;
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
-            // 
-            // button7
-            // 
-            button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
-            button7.Location = new Point(173, 43);
-            button7.Name = "button7";
-            button7.Size = new Size(129, 110);
-            button7.TabIndex = 10;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
-            // 
-            // button8
-            // 
-            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
-            button8.Location = new Point(128, 26);
-            button8.Name = "button8";
-            button8.Size = new Size(106, 103);
-            button8.TabIndex = 11;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dataGridView1.Location = new Point(6, 16);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(720, 440);
-            dataGridView1.TabIndex = 4;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // tabControl1
-            // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(569, 42);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(758, 495);
-            tabControl1.TabIndex = 5;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(dataGridView1);
-            tabPage1.Location = new Point(4, 29);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(750, 462);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Список маршрутов";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Location = new Point(4, 29);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(750, 462);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Избранные";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1362, 28);
-            menuStrip1.TabIndex = 6;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(105, 24);
-            toolStripMenuItem1.Text = "Программа";
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(59, 24);
-            toolStripMenuItem2.Text = "Файл";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "№";
-            Column1.MinimumWidth = 10;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Начальная остановка";
-            Column2.MinimumWidth = 10;
-            Column2.Name = "Column2";
-            Column2.Width = 260;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Конечная остановка";
-            Column3.MinimumWidth = 10;
-            Column3.Name = "Column3";
-            Column3.Width = 260;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Тип";
-            Column4.MinimumWidth = 10;
-            Column4.Name = "Column4";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(0, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(306, 27);
-            textBox1.TabIndex = 7;
-            // 
-            // Form1
+            // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1362, 559);
-            Controls.Add(tabControl1);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox1);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            AutoSize = true;
+            ClientSize = new Size(923, 680);
+            Controls.Add(tableLayoutPanel_TDE);
+            Controls.Add(menuStrip_TDE);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip_TDE;
+            Margin = new Padding(3, 4, 3, 4);
+            MinimumSize = new Size(934, 640);
+            Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Транспортные маршруты";
-            Load += Form1_Load;
+            Load += FormMain_Load;
+            menuStrip_TDE.ResumeLayout(false);
+            menuStrip_TDE.PerformLayout();
+            tabControlRoutes_TDE.ResumeLayout(false);
+            tabPageFeatures.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFeatures_TDE).EndInit();
+            tabPageRoutes.ResumeLayout(false);
+            panelControl_TDE.ResumeLayout(false);
+            groupBoxSearch_TDE.ResumeLayout(false);
+            groupBoxSearch_TDE.PerformLayout();
+            groupBoxFile_TDE.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRoutes_TDE).EndInit();
+            tableLayoutPanel_TDE.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private MenuStrip menuStrip_TDE;
+    private ToolStripMenuItem ToolStripMenuItemProgramm_TDE;
+    private ToolStripMenuItem ToolStripMenuAbout_TDE;
+    private ToolStripMenuItem ToolStripMenuItemFile_TDE;
+    private ToolTip toolTip_TDE;
+    private ToolStripSeparator toolStripSeparator1;
+    private ToolStripMenuItem ToolStripMenuExit_TDE;
+    private ToolStripMenuItem ToolStripMenuOpenNewFileTool_TDE;
+    private ToolStripMenuItem ToolStripMenuSaveFile_TDE;
+    private ToolStripMenuItem ToolStripMenuRefresh_TDE;
+    private ToolStripMenuItem ToolStripMenuOpenFile_TDE;
+    private OpenFileDialog openFileDialog_TDE;
+    private SaveFileDialog saveFileDialog_TDE;
+    private ToolStripMenuItem ToolStripMenuOpenNewFile_TDE;
+    private ToolStripMenuItem ToolStripMenuImages_TDE;
+        private TabControl tabControlRoutes_TDE;
+        private TabPage tabPageRoutes;
+        private DataGridView dataGridViewRoutes_TDE;
+        private DataGridViewTextBoxColumn ColumnNumber;
+        private DataGridViewTextBoxColumn ColumnStart;
+        private DataGridViewTextBoxColumn ColumnEnd;
+        private DataGridViewTextBoxColumn ColumnType;
+        private TabPage tabPageFeatures;
+        private DataGridView dataGridViewFeatures_TDE;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Panel panelControl_TDE;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private GroupBox groupBox3;
-        private GroupBox groupBox4;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private DataGridView dataGridView1;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private TextBox textBox1;
+        private Button buttonHelpImages_TDE;
+        private Button buttonHelp_TDE;
+        private GroupBox groupBoxFile_TDE;
+        private Button buttonUpdateFile_TDE;
+        private Button buttonSaveFile_TDE;
+        private Button buttonOpenFile_TDE;
+        private GroupBox groupBoxSearch_TDE;
+        private Button buttonSearch_TDE;
+        private TextBox textBoxSearch_TDE;
+        private TableLayoutPanel tableLayoutPanel_TDE;
     }
 }
