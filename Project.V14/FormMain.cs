@@ -149,7 +149,20 @@ namespace Project.V14
             SetItemsToGrid(items);
         }
 
-      
+        private void buttonSetFeature_TDE_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewFeatures_TDE.RowCount != 0)
+            {
+                for (int i = 0; i < dataGridViewFeatures_TDE.RowCount; i++)
+                {
+                    if ((string)dataGridViewFeatures_TDE.Rows[i].Cells[0].Value == items[rowFocusIndex][0]) return;
+                }
+            }
+
+            AddRowToFeature(rowFocusIndex);
+
+            buttonSetFeature_TDE.Enabled = false;
+        }
         private void AddRowToFeature(int index)
         {
             int indexRow = dataGridViewFeatures_TDE.RowCount;
@@ -160,7 +173,7 @@ namespace Project.V14
             dataGridViewFeatures_TDE.Rows[indexRow].Cells[3].Value = dataGridViewRoutes_TDE.Rows[index].Cells[3].Value;
         }
 
-     
+
 
         private void tabControlRoutes_TDE_Selected(object sender, TabControlEventArgs e)
         {
@@ -197,7 +210,12 @@ namespace Project.V14
             txt.Start();
         }
 
-       
+        private void buttonOpenRoute_TDE_Click(object sender, EventArgs e)
+        {
+            FormRoute formRoute = new FormRoute(items[rowFocusIndex]);
+            formRoute.Text = "Маршрут " + GetCurrentDataGridView().CurrentRow.Cells[0].Value;
+            formRoute.ShowDialog();
+        }
 
         private DataGridView GetCurrentDataGridView()
         {
@@ -216,6 +234,12 @@ namespace Project.V14
             }
         }
         
+
+        private void buttonHelp_TDE_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.ShowDialog();
+        }
 
         #region MouseEnterTips
         private void buttonOpenFile_TDE_MouseEnter(object sender, EventArgs e)
@@ -279,6 +303,11 @@ namespace Project.V14
         }
 
         private void tableLayoutPanel_TDE_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBoxEdit_TDE_Enter_1(object sender, EventArgs e)
         {
 
         }
