@@ -42,11 +42,11 @@
             // 
             panelAboutText_TDE.Controls.Add(groupBoxAbout_TDE);
             panelAboutText_TDE.Dock = DockStyle.Right;
-            panelAboutText_TDE.Location = new Point(207, 0);
+            panelAboutText_TDE.Location = new Point(270, 0);
             panelAboutText_TDE.Margin = new Padding(3, 4, 3, 4);
             panelAboutText_TDE.Name = "panelAboutText_TDE";
             panelAboutText_TDE.Padding = new Padding(6, 0, 0, 0);
-            panelAboutText_TDE.Size = new Size(312, 317);
+            panelAboutText_TDE.Size = new Size(312, 353);
             panelAboutText_TDE.TabIndex = 0;
             // 
             // groupBoxAbout_TDE
@@ -57,7 +57,7 @@
             groupBoxAbout_TDE.Margin = new Padding(3, 4, 3, 4);
             groupBoxAbout_TDE.Name = "groupBoxAbout_TDE";
             groupBoxAbout_TDE.Padding = new Padding(3, 4, 3, 4);
-            groupBoxAbout_TDE.Size = new Size(306, 317);
+            groupBoxAbout_TDE.Size = new Size(306, 353);
             groupBoxAbout_TDE.TabIndex = 1;
             groupBoxAbout_TDE.TabStop = false;
             groupBoxAbout_TDE.Text = "Описание";
@@ -71,7 +71,7 @@
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
-            textBox1.Size = new Size(300, 289);
+            textBox1.Size = new Size(300, 325);
             textBox1.TabIndex = 1;
             textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -82,7 +82,7 @@
             pictureBoxAbout_TDE.Location = new Point(0, 0);
             pictureBoxAbout_TDE.Margin = new Padding(3, 4, 3, 4);
             pictureBoxAbout_TDE.Name = "pictureBoxAbout_TDE";
-            pictureBoxAbout_TDE.Size = new Size(207, 317);
+            pictureBoxAbout_TDE.Size = new Size(270, 353);
             pictureBoxAbout_TDE.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAbout_TDE.TabIndex = 1;
             pictureBoxAbout_TDE.TabStop = false;
@@ -91,12 +91,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(519, 317);
+            ClientSize = new Size(582, 353);
             Controls.Add(pictureBoxAbout_TDE);
             Controls.Add(panelAboutText_TDE);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            MaximumSize = new Size(537, 364);
+            MaximumSize = new Size(600, 400);
             MinimumSize = new Size(537, 364);
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;

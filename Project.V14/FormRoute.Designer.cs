@@ -61,7 +61,7 @@ namespace Project.V14
             panelRouteDescription_TDE.Margin = new Padding(3, 4, 3, 4);
             panelRouteDescription_TDE.Name = "panelRouteDescription_TDE";
             panelRouteDescription_TDE.Padding = new Padding(6, 7, 6, 7);
-            panelRouteDescription_TDE.Size = new Size(229, 424);
+            panelRouteDescription_TDE.Size = new Size(229, 473);
             panelRouteDescription_TDE.TabIndex = 1;
             // 
             // groupBoxRouteDescription_TDE
@@ -77,7 +77,7 @@ namespace Project.V14
             groupBoxRouteDescription_TDE.Margin = new Padding(3, 4, 3, 4);
             groupBoxRouteDescription_TDE.Name = "groupBoxRouteDescription_TDE";
             groupBoxRouteDescription_TDE.Padding = new Padding(3, 4, 3, 4);
-            groupBoxRouteDescription_TDE.Size = new Size(217, 410);
+            groupBoxRouteDescription_TDE.Size = new Size(217, 459);
             groupBoxRouteDescription_TDE.TabIndex = 0;
             groupBoxRouteDescription_TDE.TabStop = false;
             groupBoxRouteDescription_TDE.Text = "Описание";
@@ -86,7 +86,7 @@ namespace Project.V14
             // 
             groupBox1.Controls.Add(textBoxRouteTime_TDE);
             groupBox1.Dock = DockStyle.Bottom;
-            groupBox1.Location = new Point(3, 273);
+            groupBox1.Location = new Point(3, 322);
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
@@ -184,8 +184,9 @@ namespace Project.V14
             pictureBoxRoute_TDE.ErrorImage = null;
             pictureBoxRoute_TDE.Location = new Point(6, 7);
             pictureBoxRoute_TDE.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxRoute_TDE.MinimumSize = new Size(340, 245);
             pictureBoxRoute_TDE.Name = "pictureBoxRoute_TDE";
-            pictureBoxRoute_TDE.Size = new Size(243, 198);
+            pictureBoxRoute_TDE.Size = new Size(340, 245);
             pictureBoxRoute_TDE.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxRoute_TDE.TabIndex = 0;
             pictureBoxRoute_TDE.TabStop = false;
@@ -194,11 +195,11 @@ namespace Project.V14
             // 
             panelRouteStops_TDE.Controls.Add(groupBoxRouteList_TDE);
             panelRouteStops_TDE.Dock = DockStyle.Bottom;
-            panelRouteStops_TDE.Location = new Point(229, 213);
+            panelRouteStops_TDE.Location = new Point(229, 262);
             panelRouteStops_TDE.Margin = new Padding(3, 4, 3, 4);
             panelRouteStops_TDE.Name = "panelRouteStops_TDE";
             panelRouteStops_TDE.Padding = new Padding(6, 7, 6, 7);
-            panelRouteStops_TDE.Size = new Size(254, 211);
+            panelRouteStops_TDE.Size = new Size(353, 211);
             panelRouteStops_TDE.TabIndex = 3;
             // 
             // groupBoxRouteList_TDE
@@ -209,7 +210,7 @@ namespace Project.V14
             groupBoxRouteList_TDE.Margin = new Padding(3, 4, 3, 4);
             groupBoxRouteList_TDE.Name = "groupBoxRouteList_TDE";
             groupBoxRouteList_TDE.Padding = new Padding(3, 4, 3, 4);
-            groupBoxRouteList_TDE.Size = new Size(242, 197);
+            groupBoxRouteList_TDE.Size = new Size(341, 197);
             groupBoxRouteList_TDE.TabIndex = 0;
             groupBoxRouteList_TDE.TabStop = false;
             groupBoxRouteList_TDE.Text = "Остановки";
@@ -220,7 +221,7 @@ namespace Project.V14
             flowLayoutPanel_TDE.Location = new Point(3, 24);
             flowLayoutPanel_TDE.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel_TDE.Name = "flowLayoutPanel_TDE";
-            flowLayoutPanel_TDE.Size = new Size(236, 169);
+            flowLayoutPanel_TDE.Size = new Size(335, 169);
             flowLayoutPanel_TDE.TabIndex = 4;
             flowLayoutPanel_TDE.Paint += flowLayoutPanel_TDE_Paint;
             // 
@@ -228,7 +229,7 @@ namespace Project.V14
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(483, 424);
+            ClientSize = new Size(582, 473);
             Controls.Add(panelRouteStops_TDE);
             Controls.Add(panelRouteImage_TDE);
             Controls.Add(panelRouteDescription_TDE);

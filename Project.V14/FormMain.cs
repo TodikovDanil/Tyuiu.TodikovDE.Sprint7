@@ -65,20 +65,7 @@ namespace Project.V14
 
                 SetItemsToGrid(items);
 
-                for (int i = 0; i < rows; i++)
-                {
-                    if (items[i].Count() == 5)
-                    {
-                        try
-                        {
-                            if (Convert.ToBoolean(items[i][4])) AddRowToFeature(i);
-                        }
-                        catch
-                        {
-                            MessageBox.Show("Неверные данные в файле (опция \"Избранное\n не является bool значением)", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
+                
 
                 buttonSaveFile_TDE.Enabled = true;
                 buttonUpdateFile_TDE.Enabled = true;
@@ -149,29 +136,8 @@ namespace Project.V14
             SetItemsToGrid(items);
         }
 
-        private void buttonSetFeature_TDE_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewFeatures_TDE.RowCount != 0)
-            {
-                for (int i = 0; i < dataGridViewFeatures_TDE.RowCount; i++)
-                {
-                    if ((string)dataGridViewFeatures_TDE.Rows[i].Cells[0].Value == items[rowFocusIndex][0]) return;
-                }
-            }
-
-            AddRowToFeature(rowFocusIndex);
-
-            buttonSetFeature_TDE.Enabled = false;
-        }
-        private void AddRowToFeature(int index)
-        {
-            int indexRow = dataGridViewFeatures_TDE.RowCount;
-            dataGridViewFeatures_TDE.RowCount += 1;
-            dataGridViewFeatures_TDE.Rows[indexRow].Cells[0].Value = dataGridViewRoutes_TDE.Rows[index].Cells[0].Value;
-            dataGridViewFeatures_TDE.Rows[indexRow].Cells[1].Value = dataGridViewRoutes_TDE.Rows[index].Cells[1].Value;
-            dataGridViewFeatures_TDE.Rows[indexRow].Cells[2].Value = dataGridViewRoutes_TDE.Rows[index].Cells[2].Value;
-            dataGridViewFeatures_TDE.Rows[indexRow].Cells[3].Value = dataGridViewRoutes_TDE.Rows[index].Cells[3].Value;
-        }
+        
+       
 
 
 
@@ -210,8 +176,9 @@ namespace Project.V14
             txt.Start();
         }
 
-        private void buttonOpenRoute_TDE_Click(object sender, EventArgs e)
+        private void ButtonOpenRoute_TDE_Click(object sender, EventArgs e)
         {
+
             FormRoute formRoute = new FormRoute(items[rowFocusIndex]);
             formRoute.Text = "Маршрут " + GetCurrentDataGridView().CurrentRow.Cells[0].Value;
             formRoute.ShowDialog();
@@ -233,7 +200,7 @@ namespace Project.V14
                 }
             }
         }
-        
+
 
         private void buttonHelp_TDE_Click(object sender, EventArgs e)
         {
